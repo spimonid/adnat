@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "/organizations" => "organizations#index"
   post "/organizations" => "organizations#create"
-  patch "/organizations" => "organizations#patch"
+  patch "/organizations/:id" => "organizations#update"
 
   post "/shifts" => "shifts#create"
 end
