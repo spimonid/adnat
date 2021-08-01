@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   get "/user_organizations/:id" => "user_organizations#show"
   post "/user_organizations" => "user_organizations#create"
-  delete "/user_organizations/:id" => "user_organizations#destroy"
+  post "/user_organizations/leave" => "user_organizations#leave_org"
 end

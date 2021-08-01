@@ -21,8 +21,8 @@ class UserOrganizationsController < ApplicationController
     end
   end
 
-  def destroy
-    user_organization = UserOrganization.find_by(id: params["id"])
+  def leave_org
+    user_organization = UserOrganization.find_by(user_id: current_user.id, organization_id: params["organization_id"])
     user_organization.destroy
   end
 end
