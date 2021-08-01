@@ -1,3 +1,4 @@
 class OrganizationSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :shifts
+  has_many :shifts
 end
