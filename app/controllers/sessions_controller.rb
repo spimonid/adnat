@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def create
     user = User.find_by(email_address: params[:email])
-    puts "USER!", user.name
     if user && user.authenticate(params[:password])
       jwt = JWT.encode(
         {

@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   patch "/organizations/:id" => "organizations#update"
 
   post "/shifts" => "shifts#create"
+
+  post "/user_organizations" => "user_organizations#create"
+  delete "/user_organizations/:id" => "user_organizations#destroy"
 end

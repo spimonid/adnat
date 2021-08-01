@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(
       name: params[:name],
-      email_address: params[:email],
+      email_address: params[:email_address],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
 
