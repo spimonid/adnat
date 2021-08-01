@@ -1,11 +1,15 @@
 class UserOrganizationsController < ApplicationController
   def index
-    user_organizations = UserOrganization.where(user_id: current_user.id, status: "active")
+    user_organizations = UserOrganization.where(user_id: current_user.id)
     render json: user_organizations
   end
 
+  def show
+    user_organization = UserOrganization.find_by(id: params["id"])
+    render json: user_organization
+  end
+
   def create
-    puts "CURRENT USER", current_user
     user_organization = UserOrganization.new(
       user_id: current_user.id,
       organization_id: params["organization_id"],
