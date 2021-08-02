@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     render json: User.all.as_json
   end
 
+  def get_current_user
+    render json: current_user
+  end
+
   def create
     user = User.new(
       name: params[:name],

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   post "/users" => "users#create"
+  get "/current_user" => "users#get_current_user"
 
   post "/sessions" => "sessions#create"
 
