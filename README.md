@@ -1,3 +1,3 @@
 # TANDA
 
-## Users can belong to multiple organizations.
+Users can belong to multiple organizations.
