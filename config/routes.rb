@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post "/organizations" => "organizations#create"
   patch "/organizations/:id" => "organizations#update"
 
-  get "/shifts" => "shifts#index"
   post "/shifts" => "shifts#create"
 
   get "/user_organizations/:id" => "user_organizations#show"
