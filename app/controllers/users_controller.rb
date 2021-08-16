@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-  def index
-    render json: User.all.as_json
-  end
-
   def get_current_user
     render json: current_user
   end

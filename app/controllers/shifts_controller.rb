@@ -1,8 +1,4 @@
 class ShiftsController < ApplicationController
-  def index
-    render json: Shift.all
-  end
-
   def create
     date = params["shift_date"]
     user_id = params["user_id"]
